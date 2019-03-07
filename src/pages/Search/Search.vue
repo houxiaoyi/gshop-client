@@ -1,0 +1,86 @@
+<template>
+  <div>
+    <section class="search">
+      <!--<header class="header">
+        <a href="javascript:;" class="header_title">
+          <span class="header_title_text">搜索</span>
+        </a>
+      </header>-->
+      <HeaderTop title="搜索">
+      </HeaderTop>
+      <form class="search_form" action="#">
+        <input type="search" name="search" placeholder="请输入商家或美食名称" class="search_input">
+        <input type="submit" name="submit" class="search_submit">
+      </form>
+    </section>
+  </div>
+</template>
+
+<script>
+  import HeaderTop from '../../components/HeaderTop/HeaderTop.vue'
+
+  export default {
+    //将组件映射成标签
+    components:{
+      HeaderTop
+    }
+  }
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus">
+  @import "../../common/stylus/mixins.styl"
+  .search
+    width 100%
+    .header
+      background-color #02a774
+      position fixed
+      left 0
+      top 0
+      z-index 100
+      width 100%
+      height 45px
+      /*.header_search
+        position absolute
+        left 15px
+        top 50%
+        transform translateY(-50%)
+        width 10%
+        height 50%
+        .iconfont
+          font-size 22px
+          color #fff*/
+      .header_title
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%,-50%)
+        font-size 22px
+        text-align center
+        color #fff
+    .search_form
+      clearFix()
+      margin-top 45px
+      background-color #fff
+      padding 12px 8px
+      input
+        height 35px
+        padding 0 4px
+        border-radius 2px
+        font-weight bold
+        /*outline none：绘制元素轮廓的属性，如果为none则不会出现*/
+        outline none
+        &.search_input
+          float left
+          border 4px solid #f2f2f2
+          font-size 14px
+          background-color #f2f2f2
+          color #333
+          width 79%
+        &.search_submit
+          float right
+          width 18%
+          border 4px solid #02a774
+          font-size 16px
+          color #fff
+          background-color #02a774
+</style>
